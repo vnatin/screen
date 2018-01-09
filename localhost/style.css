@@ -1,0 +1,495 @@
+﻿<style type="text/css">
+
+
+@font-face {
+  font-family: mriam;
+  src: url(http://yapro.ru/uploads/Files/mriam.ttf);
+
+  font-family: perpetua;
+  src: url(http://localhost/ttf/perpetua.ttf);
+
+}
+
+a {
+  color: white; /* цвет синий */
+  text-decoration: none; /* подчёркивание */
+  font-family: "Times New Roman", Times, serif; /* семейство шрифтов */
+  font-size: 17px; /* размер шрифта */
+font-color: white;
+color;white;
+line-height: 2;
+  cursor: hand; /* для IE */
+  cursor: pointer; /* курсор при наведении станет «рукой» */
+}
+
+a.work {
+  color: white; /* цвет синий */
+  text-decoration: none; /* подчёркивание */
+font-family: mriam; 
+font-size: 100%;
+line-height: 1;
+  cursor: hand; /* для IE */
+  cursor: pointer; /* курсор при наведении станет «рукой» */
+}
+
+body { 
+z-index: 0;
+font-family: Arial, Helvetica, sans-serif;
+font-size: 14px;
+font-color: white;
+color: white;
+line-height: 2;
+padding: 0; margin: 0; 
+background-color: black;
+/* background: url('img/fon.jpg') no-repeat center center fixed;   */    
+       -webkit-background-size: cover;
+       -moz-background-size: cover;
+       -o-background-size: cover;
+       background-size: cover;
+
+} 
+
+a.button10 {
+opacity: 0.7;
+  width: 13%;
+  display: inline-block;
+  color: white;
+  font-size: 125%;
+  font-weight: 700;
+  text-decoration: none;
+  user-select: none;
+  padding: .25em .5em;
+  outline: none;
+  border: 1px solid rgb(0,0,0);
+  border-radius: 7px;
+  background: rgb(0,0,0) linear-gradient(rgb(255,255,255), rgb(0,0,0));
+  box-shadow: inset 0 -2px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,0,0);
+  transition: box-shadow .2s, border-color .2s;
+} 
+a.button10:hover {
+color: black;
+  background: rgb(255,255,255) linear-gradient(rgb(255,255,255), rgb(0,0,0));
+  box-shadow: inset 0 -1px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,255,.5);
+}
+a.button10:active {
+  padding: calc(.25em + 1px) .5em calc(.25em - 1px);
+color: black;
+  background: rgb(255,255,255) linear-gradient(rgb(255,255,255), rgb(0,0,0));
+  box-shadow: inset 0 -1px 1px rgba(0,0,0,0), inset 0 1px 2px rgba(0,0,0,0), inset 0 0 0 60px rgba(255,255,255,.5);
+}
+
+p.top1 {
+font-family: mriam; 
+font-size: 122%;
+color: white;
+}
+
+p.top2 {
+font-family: mriam; 
+font-size: 150%;
+color: white;
+}
+
+p.top3 {
+font-family: mriam; 
+font-size: 110%;
+color: white;
+text-align:right;
+}
+
+p.text1 {
+font-family: mriam; 
+font-size: 125%;
+color: white;
+-webkit-hyphens: auto;
+ -moz-hyphens: auto; hyphens: auto;
+  text-align: justify;
+}
+
+p.text2 {
+font-family: mriam; 
+font-size: 125%;
+color: black;
+-webkit-hyphens: auto;
+ -moz-hyphens: auto; hyphens: auto;
+  text-align: justify;
+}
+
+#ugolkrug{
+ opacity: 0.9;
+ border: 3px #CCCCCC solid; /* стили рамки */
+ -moz-border-radius: 10px; /* закругление для старых Mozilla Firefox */
+ -webkit-border-radius: 10px; /* закругление для старых Chrome и Safari */
+ -khtml-border-radius:10px; /* закругл. для браузера Konquerer системы Linux */
+ border-radius: 10px; /* закругление углов для всех, кто понимает */
+}
+
+#slideout {
+ 
+background : gray; 
+position: fixed;
+  
+top: 60px;
+  
+left: 0;
+  
+-webkit-transition-duration: 0.3s;
+  
+-moz-transition-duration: 0.3s;
+  
+-o-transition-duration: 0.3s;
+  
+transition-duration: 0.3s;
+}
+
+
+#slideout_inner {
+  
+position: fixed;
+  
+top: 40px;
+  
+left: -250px;
+  
+-webkit-transition-duration: 0.3s;
+  
+-moz-transition-duration: 0.3s;
+  
+-o-transition-duration: 0.3s;
+  
+transition-duration: 0.3s;
+}
+
+
+#slideout:hover {
+  left: 250px;
+}
+
+
+#slideout:hover #slideout_inner {
+  left: 0;
+}
+
+
+
+#slideouts {
+ 
+
+position: fixed;
+  
+top: 0px;
+  
+left: 60;
+  
+-webkit-transition-duration: 0.3s;
+  
+-moz-transition-duration: 0.3s;
+  
+-o-transition-duration: 0.3s;
+  
+transition-duration: 0.3s;
+}
+
+
+#slideouts_inner {
+  
+position: fixed;
+  
+top: -170px;
+  
+left: 60%px;
+  
+-webkit-transition-duration: 0.3s;
+  
+-moz-transition-duration: 0.3s;
+  
+-o-transition-duration: 0.3s;
+  
+transition-duration: 0.3s;
+}
+
+
+#slideouts:hover {
+  top: 170px;
+}
+
+
+#slideouts:hover #slideouts_inner {
+  top: 0;
+}
+
+
+
+
+/* Слайдер */
+
+.slides { left:-20; height:400px;
+ width:90%;   margin:0px auto;
+    overflow:hidden;
+    position:relative;
+    
+}
+
+.slides ul {
+    list-style:none;
+    position:relative;
+ width:100%;}
+
+
+/* Кадры анимации #anim_slides */
+@-webkit-keyframes 
+anim_slides {
+    
+0% {
+        opacity:0;
+    }
+    
+6% {
+        opacity:1;
+    }
+    
+24% {
+        opacity:1;
+    }
+    
+30% {
+        opacity:0;
+    }
+    
+100% {
+        opacity:0;
+    }
+}
+
+@-moz-keyframes anim_slides {
+    
+0% {
+        opacity:0;
+    }
+    
+6% {
+        opacity:1;
+    }
+    
+24% {
+        opacity:1;
+    }
+    
+30% {
+        opacity:0;
+    }
+    
+100% {
+        opacity:0;
+    }
+}
+
+
+.slides ul li {
+    
+opacity:0;
+    
+position:absolute;
+    
+top:-100;
+
+    
+/* анимация css3 */
+    
+-webkit-animation-name: anim_slides;
+    
+-webkit-animation-duration: 24.0s;
+    
+-webkit-animation-timing-function: linear;
+    
+-webkit-animation-iteration-count: infinite;
+    
+-webkit-animation-direction: normal;
+    
+-webkit-animation-delay: 0;
+    
+-webkit-animation-play-state: running;
+    
+-webkit-animation-fill-mode: forwards;
+
+    
+-moz-animation-name: anim_slides;
+    
+-moz-animation-duration: 24.0s;
+    
+-moz-animation-timing-function: linear;
+    
+-moz-animation-iteration-count: infinite;
+    
+-moz-animation-direction: normal;
+    
+-moz-animation-delay: 0;
+    
+-moz-animation-play-state: running;
+    
+-moz-animation-fill-mode: forwards;
+}
+
+/* Задержки css3 */
+
+.slides ul  li:nth-child(2), 
+.slides ul  li:nth-child(2) 
+div {
+    
+-webkit-animation-delay: 6.0s;
+    
+-moz-animation-delay: 6.0s;
+}
+
+.slides ul  li:nth-child(3), 
+.slides ul  li:nth-child(3) 
+div {
+    
+-webkit-animation-delay: 12.0s;
+    
+-moz-animation-delay: 12.0s;
+}
+
+.slides ul  li:nth-child(4), 
+.slides ul  li:nth-child(4) 
+div {
+    
+-webkit-animation-delay: 18.0s;
+    
+-moz-animation-delay: 18.0s;
+}
+
+.slides ul li img {
+    display:block;
+}
+
+/* Кадры анимации #anim_titles */
+@-webkit-keyframes anim_titles {
+    0% {
+        left:100%;
+        opacity:0;
+    }
+    5% {
+        left:10%;
+        opacity:1;
+    }
+    20% {
+        left:10%;
+        opacity:1;
+    }
+    25% {
+        left:100%;
+        opacity:0;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+@-moz-keyframes anim_titles {
+    0% {
+        left:100%;
+        opacity:0;
+    }
+    5% {
+        left:10%;
+        opacity:1;
+    }
+    20% {
+        left:10%;
+        opacity:1;
+    }
+    25% {
+        left:100%;
+        opacity:0;
+    }
+    100% {
+        left:100%;
+        opacity:0;
+    }
+}
+
+.slides ul li div {
+    background-color:#000000;
+    border-radius:10px 10px 10px 10px;
+    box-shadow:0 0 5px #FFFFFF inset;
+    color:#FFFFFF;
+    font-size:26px;
+    left:10%;
+    margin:0 auto;
+    padding:20px;
+    position:absolute;
+    top:200;
+    width:200px;
+
+    /* Анимация css3 */
+    -webkit-animation-name: anim_titles;
+    -webkit-animation-duration: 24.0s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-direction: normal;
+    -webkit-animation-delay: 0;
+    -webkit-animation-play-state: running;
+    -webkit-animation-fill-mode: forwards;
+
+    -moz-animation-name: anim_titles;
+    -moz-animation-duration: 24.0s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+    -moz-animation-direction: normal;
+    -moz-animation-delay: 0;
+    -moz-animation-play-state: running;
+    -moz-animation-fill-mode: forwards;
+}
+
+
+
+
+.container {padding: 0 0 70px 0;} /* отступ снизу */
+
+#message
+{
+display: block;
+display: none;
+
+/* ссылка над всеми элементами */
+z-index: 999;
+
+/* ссылка не заслоняет полностью текст под ней */
+opacity: .8;
+
+/* ссылка всегда на одном и том же месте */
+position: fixed;
+
+/* ссылка внизу страницы */
+top: 100%;
+margin-top: -80px; /* = height + preferred bottom margin */
+
+/* ссылка по центру */
+left: 87%;
+margin-left: -80px;
+
+/* закругленные углы */
+-moz-border-radius: 24px;
+-webkit-border-radius: 24px;
+
+/* ссылка большая, заметная и ее легко найти */
+width: 200px;
+line-height: 48px;
+height: 38px;
+padding: 10px;
+background-color: #000;
+font-size: 24px;
+text-align: center;
+}
+
+#message a { color: #000; }
+
+
+div#rotator {position:relative; height:640px; margin-left: 0px; left:0px;}
+div#rotator ul li {float:left; position:absolute; list-style: none;}
+div#rotator ul li.show {z-index:400;}
+
+</style>
+
+
